@@ -3,7 +3,9 @@
 
 npm desktop manager for handling npm packages. Supported platforms: OS X Windows and Linux. Build on <code>Electron</code>
 
-**I am working on the new release with many extra features, new design and yarn support! You can preview my work on develop branch - stay tuned**
+## New release soon
+
+I am working on the new release with many extra features, rewrite almost every component using React Hooks, new manager API  and new design! You can preview my work on develop branch - stay tuned :)
 
 ## Features
 
