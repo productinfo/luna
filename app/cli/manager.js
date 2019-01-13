@@ -83,7 +83,7 @@ const execute = (
 
 exports.list = (options, callback) => {
   const command = ['list'];
-  const { mode, directory } = options || {};
+  const { mode, directory, name } = options || {};
 
   if (!callback || typeof callback !== 'function') {
     Promise.reject(
@@ -101,6 +101,9 @@ exports.list = (options, callback) => {
     mode === 'GLOBAL' && !directory
       ? command.concat(defaultsArgs.list, '-g')
       : command.concat(defaultsArgs.list);
+
+  // TODO
+  console.log(name);
 
   // returns a Promise
   return execute('npm', run, mode, directory, callback);
@@ -141,7 +144,7 @@ exports.outdated = (options, callback) => {
 exports.search = (opts, callback) => {
   const command = ['search'];
   const { directory, mode, pkgName } = opts;
-  const defaults = ['--depth=0', '--json'];
+  const defaults = ['--depth=0', '--json', '--no-description'];
 
   if (!pkgName) {
     return Promise.reject('npm[search] package name parameter must be given');

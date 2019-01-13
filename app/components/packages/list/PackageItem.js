@@ -72,7 +72,7 @@ const PackageItemRow = ({
     ipcRenderer.send('ipc-event', {
       activeManager: manager,
       ipcEvent: 'view',
-      cmd: ['view'],
+      cmd: ['list', 'view'],
       name,
       version,
       mode,

@@ -30,7 +30,6 @@ import {
 
 import {
   onAddNotification,
-  onToggleLoader,
   onSetPage,
   onSetPageRows,
   onSetSnackbar
@@ -356,6 +355,8 @@ const Packages = ({ classes }) => {
                           addSelected={() => onAddSelected(dispatch, { name })}
                           name={name}
                           manager={manager}
+                          mode={mode}
+                          directory={directory}
                           version={version}
                           latest={latest}
                           isOutdated={isOutdated}

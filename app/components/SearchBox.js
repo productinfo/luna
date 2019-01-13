@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { useDispatch } from 'redux-react-hook';
@@ -30,7 +30,7 @@ const SearchBox = props => {
 
     toggleSnackbar(false);
 
-    if (!searchValue || searchValue.length <= 3) {
+    if (!searchValue || !searchValue.length) {
       toggleSnackbar(true);
       return;
     }
